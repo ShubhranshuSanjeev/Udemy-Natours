@@ -1,0 +1,18 @@
+@mixin clearfix() {
+
+	&:after {
+	   content: ".";
+	   visibility: hidden;
+	   display: block;
+	   height: 0;
+	   clear: both;
+	}
+
+}
+
+@mixin center-vertical-horizontal{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}

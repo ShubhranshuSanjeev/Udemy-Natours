@@ -1,0 +1,155 @@
+.card{
+
+	position: relative;
+
+	-moz-perspective:1500px;
+	perspective:1500px;
+
+	height: 52rem;
+
+	transition:all 1s;
+
+	&__side{
+		position: absolute;
+		width: 100%;
+		height:52rem;
+
+		transition:all 1s;
+
+		-moz-backface-visibility:hidden;
+		backface-visibility:hidden;
+		overflow: hidden;
+
+
+		border-radius: 3px;
+		box-shadow: 0 1.5rem 4rem rgba($color-black,0.2);
+
+		&--front{
+			background-color:$color-white;
+		}
+		&--back{
+
+			transform:rotateY(180deg);
+
+			&-1{
+				background-image:linear-gradient(to right bottom,$color-secondary-light,$color-secondary-dark);
+			}
+
+			&-2{
+				background-image:linear-gradient(to right bottom,$color-primary-light,$color-primary-dark);
+			}
+
+			&-3{
+				background-image:linear-gradient(to right bottom,$color-tertiary-light,$color-tertiary-dark);
+			}
+		}
+
+	}
+
+	&:hover &__side--front{
+		transform:rotateY(-180deg);
+	}
+
+	&:hover &__side--back{
+		transform:rotateY(0deg);
+	}
+
+
+	&__picture{
+		background-size: cover;
+		height:23rem;
+		background-blend-mode:screen;
+
+		clip-path:polygon(0 0,100% 0,100% 85%,0 100%);
+
+		border-top-right-radius: 3px;
+		border-top-left-radius: 3px;
+
+		&--1{
+		    background-image: linear-gradient(to right bottom,$color-secondary-light,$color-secondary-dark),url(../img/nat-5.jpg);
+		}
+
+		&--2{
+		    background-image: linear-gradient(to right bottom,$color-primary-light,$color-primary-dark),url(../img/nat-6.jpg);
+		}
+		&--3{
+			background-image: linear-gradient(to right bottom,$color-tertiary-light,$color-tertiary-dark),url(../img/nat-7.jpg);
+
+		}
+	}
+
+	&__heading{
+
+		text-transform: uppercase;
+		font-size: 2.8rem;
+		font-weight: 300;
+		text-align: right;
+
+		color: $color-white;
+
+		width: 75%;
+
+		position: absolute;
+		top: 24%;
+		right: 6%;
+
+	}
+
+	&__heading-span{
+
+		padding: 1rem 1.5rem;
+
+		box-decoration-break: clone;
+
+		&--1{background-image:linear-gradient(to right bottom,rgba($color-secondary-light,0.8),rgba($color-secondary-dark,0.8)); }
+		&--2{background-image: linear-gradient(to right bottom,rgba($color-primary-light,0.8),rgba($color-primary-dark,0.8));}
+		&--3{background-image: linear-gradient(to right bottom,rgba($color-tertiary-light,0.8),rgba($color-tertiary-dark,0.8));}
+
+	}
+
+
+	&__details{
+		padding: 3rem;
+		font-size: 1.5rem;
+
+		ul{
+			list-style: none;
+			margin:0 auto;
+
+			width: 80%;
+			text-align: center;
+
+			li{
+				padding: 1rem;
+			}
+
+			li:not(:last-child){
+				border-bottom: 1px solid $color-grey-light-2;
+			}
+		}
+	}
+
+	&__cta{
+		@include center-vertical-horizontal;
+		width: 90%;
+		text-align: center;
+	}
+
+	&__price-box{
+		text-align: center;
+		margin-bottom: 8rem;
+		color: $color-white;
+	}
+
+	&__price-only{
+		font-size: 1.4rem;
+		text-transform: uppercase;
+	}
+
+	&__price-value{
+		font-size: 6rem;
+		font-weight: 100;
+	}
+
+
+}
