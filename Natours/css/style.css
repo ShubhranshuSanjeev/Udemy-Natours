@@ -479,6 +479,9 @@ body {
 
 .form__input:focus + .form__input-underline {
   width: 90%; }
+  @media (max-width: 56.25em) {
+    .form__input:focus + .form__input-underline {
+      width: 100%; } }
 
 .form__input-underline {
   position: absolute;
