@@ -52,6 +52,10 @@
         background-color: $color-primary;
         z-index: 100;
         transition: all 0.3s;
+
+        @include respond(tab-port){
+            width: 100%;
+        }
     }
 
 
