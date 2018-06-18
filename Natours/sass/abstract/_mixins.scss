@@ -54,7 +54,7 @@ $breakpoint argument choices:
 	}
 
 	@if $breakpoint == removeHover {
-		@media (min-width: 56.25em){@content};
+		@media (min-width: 56.26em){@content};
 	}
 
 }
