@@ -7,20 +7,28 @@
 	position: relative;
 	transition: all 0.3s;
 	box-shadow: 0 1rem 2rem rgba($color-black,0.2);
-	
+
+	@include respond(tab-port){
+		padding: 2rem;
+	}
+
 	&__icon{
 		display: inline-block;
 		margin-bottom: .5rem;
 		font-size: 6rem;
 		color: transparent;
-		background-image: linear-gradient(to right,$color-primary-light,$color-primary-dark); 
+		background-image: linear-gradient(to right,$color-primary-light,$color-primary-dark);
 		-webkit-background-clip:text;
+
+		@include respond(tab-port){
+			margin-bottom: 0rem;
+		}
 	}
-	
+
 	&__text{
 		font-size: 1.5rem;
 	}
-	
+
 	&:hover{
 		transform:translateY(-1.5rem) scale(1.03);
 	}
